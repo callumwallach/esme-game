@@ -83,14 +83,14 @@ class Enemy {
 class FlyingEnemy extends Enemy {
   constructor(game) {
     super(game);
-    this.width = 60;
-    this.height = 44;
+    this.width = 83;
+    this.height = 63;
     this.x = this.getStageRight() + Math.random() * this.game.width * 0.5;
     this.y = Math.random() * this.game.height * 0.5;
     this.speedX = Math.random() + 1;
     this.speedY = 0;
-    this.maxFrame = 5;
-    this.image = document.getElementById("enemyFly");
+    this.maxFrame = 14;
+    this.image = document.getElementById("enemyFlying");
     this.angle = 0;
     this.va = Math.random() * 0.1 + 0.1;
     this.points = 20;
@@ -102,17 +102,39 @@ class FlyingEnemy extends Enemy {
   }
 }
 
+// class FlyingEnemy extends Enemy {
+//   constructor(game) {
+//     super(game);
+//     this.width = 60;
+//     this.height = 44;
+//     this.x = this.getStageRight() + Math.random() * this.game.width * 0.5;
+//     this.y = Math.random() * this.game.height * 0.5;
+//     this.speedX = Math.random() + 1;
+//     this.speedY = 0;
+//     this.maxFrame = 5;
+//     this.image = document.getElementById("enemyFly");
+//     this.angle = 0;
+//     this.va = Math.random() * 0.1 + 0.1;
+//     this.points = 20;
+//   }
+//   update(deltaTime) {
+//     super.update(deltaTime);
+//     this.angle += this.va;
+//     this.y += Math.sin(this.angle);
+//   }
+// }
+
 class GroundEnemy extends Enemy {
   constructor(game) {
     super(game);
-    this.width = 60;
-    this.height = 87;
+    this.width = 78;
+    this.height = 68;
     this.x = this.getStageRight();
     this.y = this.getGroundMin();
-    this.speedX = 0;
+    this.speedX = Math.random();
     this.speedY = 0;
-    this.maxFrame = 1;
-    this.image = document.getElementById("enemyPlant");
+    this.maxFrame = 12;
+    this.image = document.getElementById("enemyGround");
     this.points = 10;
   }
   update(deltaTime) {
@@ -120,17 +142,35 @@ class GroundEnemy extends Enemy {
   }
 }
 
+// class GroundEnemy extends Enemy {
+//   constructor(game) {
+//     super(game);
+//     this.width = 60;
+//     this.height = 87;
+//     this.x = this.getStageRight();
+//     this.y = this.getGroundMin();
+//     this.speedX = 0;
+//     this.speedY = 0;
+//     this.maxFrame = 1;
+//     this.image = document.getElementById("enemyPlant");
+//     this.points = 10;
+//   }
+//   update(deltaTime) {
+//     super.update(deltaTime);
+//   }
+// }
+
 class ClimbingEnemy extends Enemy {
   constructor(game) {
     super(game);
-    this.width = 120;
-    this.height = 144;
+    this.width = 79;
+    this.height = 86;
     this.x = this.getStageRight();
     this.y = Math.random() * this.game.height * 0.5;
     this.speedX = 0;
     this.speedY = Math.random() > 0.5 ? 1 : -1;
-    this.maxFrame = 5;
-    this.image = document.getElementById("enemySpider");
+    this.maxFrame = 10;
+    this.image = document.getElementById("enemyClimb");
     this.points = 50;
   }
   update(deltaTime) {
@@ -141,10 +181,38 @@ class ClimbingEnemy extends Enemy {
   draw(context) {
     super.draw(context);
     context.beginPath();
+    context.lineWidth = 2;
     context.moveTo(this.x + this.width / 2, 0);
-    context.lineTo(this.x + this.width / 2, this.y + 50);
+    context.lineTo(this.x + this.width / 2, this.y + 3);
     context.stroke();
   }
 }
+
+// class ClimbingEnemy extends Enemy {
+//   constructor(game) {
+//     super(game);
+//     this.width = 120;
+//     this.height = 144;
+//     this.x = this.getStageRight();
+//     this.y = Math.random() * this.game.height * 0.5;
+//     this.speedX = 0;
+//     this.speedY = Math.random() > 0.5 ? 1 : -1;
+//     this.maxFrame = 5;
+//     this.image = document.getElementById("enemyClimb");
+//     this.points = 50;
+//   }
+//   update(deltaTime) {
+//     super.update(deltaTime);
+//     if (this.isOnGround()) this.speedY *= -1;
+//     if (this.isAboveSky()) this.markedForDeletion = true;
+//   }
+//   draw(context) {
+//     super.draw(context);
+//     context.beginPath();
+//     context.moveTo(this.x + this.width / 2, 0);
+//     context.lineTo(this.x + this.width / 2, this.y + 50);
+//     context.stroke();
+//   }
+// }
 
 export { FlyingEnemy, GroundEnemy, ClimbingEnemy, Enemy };

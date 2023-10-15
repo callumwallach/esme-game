@@ -52,10 +52,10 @@ body::-webkit-scrollbar {
 #layer6,
 #layer7,
 #fireBar,
-#enemyFly,
+#enemyFlying,
 #enemyBoss,
-#enemyPlant,
-#enemySpider,
+#enemyGround,
+#enemyClimb,
 #collisionAnimation {
   display: none;
 }

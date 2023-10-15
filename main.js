@@ -144,9 +144,9 @@ window.addEventListener("load", () => {
     }
     draw(context) {
       this.background.draw(context);
+      this.enemies.forEach((enemy) => enemy.draw(context));
       this.powerUps.forEach((powerUp) => powerUp.draw(context));
       this.player.draw(context);
-      this.enemies.forEach((enemy) => enemy.draw(context));
       this.projectiles.forEach((projectile) => projectile.draw(context));
       this.particles.forEach((particle) => particle.draw(context));
       this.collisions.forEach((collision) => collision.draw(context));
@@ -161,6 +161,14 @@ window.addEventListener("load", () => {
         );
       this.enemies.push(new FlyingEnemy(this));
     }
+    // addEnemy() {
+    //   if (this.speed > 0)
+    //     this.enemies.push(
+    //       Math.random() < 0.5
+    //         ? new ClimbingEnemy(this)
+    //         : new ClimbingEnemy(this)
+    //     );
+    // }
     addBoss() {
       this.bossStage = true;
       this.boss = new BossEnemy(this, this.bossMaxHealth);

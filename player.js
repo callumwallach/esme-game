@@ -164,15 +164,6 @@ class Player {
       // );
       // context.stroke();
     }
-    if (this.frameX === 5 && this.currentState.state === "RUNNING") {
-      this.frameX++;
-    }
-    if (
-      (this.frameX === 1 || this.frameX === 4 || this.frameX === 7) &&
-      this.currentState.state === "HIT"
-    ) {
-      this.frameX++;
-    }
     context.drawImage(
       this.image,
       this.frameX * this.width,
