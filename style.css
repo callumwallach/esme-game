@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+body {
+  background-color: #181a1b;
+  overscroll-behavior-y: contain;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* game assets */
+
+#canvas1 {
+  /* display: none; */
+  opacity: 0;
+  border: 5px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  font-family: "Creepster", cursive;
+  transition: opacity 1s;
+}
+
+#cat,
+#gem,
+#ice,
+#dog,
+#boy,
+#girl,
+#fire,
+#blast,
+#lives,
+#player,
+#layer1,
+#layer2,
+#layer3,
+#layer4,
+#layer5,
+#layer6,
+#layer7,
+#fireBar,
+#enemyFly,
+#enemyBoss,
+#enemyPlant,
+#enemySpider,
+#collisionAnimation {
+  display: none;
+}
+
+#fullScreenButton {
+  display: none;
+  position: absolute;
+  font-family: "Creepster", cursive;
+  font-size: 14px;
+  padding: 9px;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#loading {
+  color: white !important;
+  position: absolute;
+  font-size: 1.5rem;
+  font-family: Arial, "Creepster", cursive;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* mosaic assets */
+
+#mosaicModeButton,
+#gameModeButton {
+  display: none;
+  pointer-events: none;
+  position: absolute;
+  font-family: Arial;
+  font-size: 12px;
+  padding: 9px;
+  top: 20px;
+  right: 20px;
+}
+
+#img-zoom-container,
+#zoomed,
+#mosaic {
+  /* display: none; */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#mosaic {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#img-zoom-container {
+  display: none;
+  position: relative;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  position: absolute;
+  /*set the size of the result div:*/
+  width: 300px;
+  height: 300px;
+}
+
+/* .vis {
+  opacity: 1 !important;
+} */

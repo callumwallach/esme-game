@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You vs the Night</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="canvas1"></canvas>
+    <div id="img-zoom-container">
+      <img id="mosaic" src="assets/mosaic.jpg" />
+      <div id="zoomed" class="img-zoom-result"></div>
+    </div>
+
+    <img id="dog" src="assets/dog.png" />
+    <img id="girl" src="assets/girl.png" />
+    <img id="boy" src="assets/boy.png" />
+    <img id="cat" src="assets/cat.png" />
+    <img id="layer1" src="assets/layer-1.png" />
+    <img id="layer2" src="assets/layer-2.png" />
+    <img id="layer3" src="assets/layer-3.png" />
+    <img id="layer4" src="assets/layer-4.png" />
+    <img id="layer5" src="assets/layer-5.png" />
+    <img id="layer6" src="assets/layer-6.png" />
+    <img id="layer7" src="assets/layer-7.png" />
+    <img id="enemyBoss" src="assets/enemy_boss.png" />
+    <img id="enemyFly" src="assets/enemy_fly.png" />
+    <img id="enemyPlant" src="assets/enemy_plant.png" />
+    <img id="enemySpider" src="assets/enemy_spider_big.png" />
+    <img id="fire" src="assets/fire.png" />
+    <img id="fireBar" src="assets/fire-bar.png" />
+    <img id="ice" src="assets/ice.png" />
+    <img id="blast" src="assets/blast.png" />
+    <img id="collisionAnimation" src="assets/boom.png" />
+    <img id="lives" src="assets/lives.png" />
+    <img id="gem" src="assets/gem_blue.png" />
+
+    <audio id="boom" src="assets/boom.wav"></audio>
+
+    <p id="loading">loading...</p>
+    <button id="fullScreenButton">Toggle Fullscreen</button>
+    <button id="gameModeButton">Return To Game</button>
+    <button id="mosaicModeButton">Return To Photo</button>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
