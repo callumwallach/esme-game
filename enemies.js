@@ -160,44 +160,16 @@ class GroundEnemy extends Enemy {
 //   }
 // }
 
-class ClimbingEnemy extends Enemy {
-  constructor(game) {
-    super(game);
-    this.width = 79;
-    this.height = 86;
-    this.x = this.getStageRight();
-    this.y = Math.random() * this.game.height * 0.5;
-    this.speedX = 0;
-    this.speedY = Math.random() > 0.5 ? 1 : -1;
-    this.maxFrame = 10;
-    this.image = document.getElementById("enemyClimb");
-    this.points = 50;
-  }
-  update(deltaTime) {
-    super.update(deltaTime);
-    if (this.isOnGround()) this.speedY *= -1;
-    if (this.isAboveSky()) this.markedForDeletion = true;
-  }
-  draw(context) {
-    super.draw(context);
-    context.beginPath();
-    context.lineWidth = 2;
-    context.moveTo(this.x + this.width / 2, 0);
-    context.lineTo(this.x + this.width / 2, this.y + 3);
-    context.stroke();
-  }
-}
-
 // class ClimbingEnemy extends Enemy {
 //   constructor(game) {
 //     super(game);
-//     this.width = 120;
-//     this.height = 144;
+//     this.width = 79;
+//     this.height = 86;
 //     this.x = this.getStageRight();
 //     this.y = Math.random() * this.game.height * 0.5;
 //     this.speedX = 0;
 //     this.speedY = Math.random() > 0.5 ? 1 : -1;
-//     this.maxFrame = 5;
+//     this.maxFrame = 10;
 //     this.image = document.getElementById("enemyClimb");
 //     this.points = 50;
 //   }
@@ -209,10 +181,38 @@ class ClimbingEnemy extends Enemy {
 //   draw(context) {
 //     super.draw(context);
 //     context.beginPath();
+//     context.lineWidth = 2;
 //     context.moveTo(this.x + this.width / 2, 0);
-//     context.lineTo(this.x + this.width / 2, this.y + 50);
+//     context.lineTo(this.x + this.width / 2, this.y + 3);
 //     context.stroke();
 //   }
 // }
+
+class ClimbingEnemy extends Enemy {
+  constructor(game) {
+    super(game);
+    this.width = 120;
+    this.height = 144;
+    this.x = this.getStageRight();
+    this.y = Math.random() * this.game.height * 0.5;
+    this.speedX = 0;
+    this.speedY = Math.random() > 0.5 ? 1 : -1;
+    this.maxFrame = 5;
+    this.image = document.getElementById("enemyClimb");
+    this.points = 50;
+  }
+  update(deltaTime) {
+    super.update(deltaTime);
+    if (this.isOnGround()) this.speedY *= -1;
+    if (this.isAboveSky()) this.markedForDeletion = true;
+  }
+  draw(context) {
+    super.draw(context);
+    context.beginPath();
+    context.moveTo(this.x + this.width / 2, 0);
+    context.lineTo(this.x + this.width / 2, this.y + 50);
+    context.stroke();
+  }
+}
 
 export { FlyingEnemy, GroundEnemy, ClimbingEnemy, Enemy };

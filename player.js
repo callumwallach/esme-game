@@ -139,6 +139,17 @@ class Player {
       this.currentState.exit();
   }
   draw(context) {
+    context.drawImage(
+      this.image,
+      this.frameX * this.width,
+      this.offsetY ? this.offsetY : this.frameY * this.height,
+      this.width,
+      this.height,
+      this.x,
+      this.y,
+      this.width,
+      this.height
+    );
     if (this.game.debug) {
       context.lineWidth = 2;
       context.strokeStyle = "white";
@@ -164,17 +175,6 @@ class Player {
       // );
       // context.stroke();
     }
-    context.drawImage(
-      this.image,
-      this.frameX * this.width,
-      this.offsetY ? this.offsetY : this.frameY * this.height,
-      this.width,
-      this.height,
-      this.x,
-      this.y,
-      this.width,
-      this.height
-    );
   }
   getTouchRollIcon() {
     return {

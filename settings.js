@@ -47,17 +47,17 @@ export default {
       },
       {
         fontSize: 0.75,
-        message: "Your lil buddha belly is probably full of cake and junk food",
+        message: "To the girl who always works harder than everyone else",
         position: -85,
       },
       {
         fontSize: 0.75,
-        message: "But before you relax in front of a birthday movie",
+        message: "Who is kind and caring and looks out for her little sister",
         position: -45,
       },
       {
         fontSize: 0.75,
-        message: "You must defeat my minions and survive the night!!",
+        message: "Have a wonderful relaxing and loving birthday!!",
         position: -5,
       },
       {
@@ -65,11 +65,15 @@ export default {
         message: "Welcome to...",
         position: 55,
       },
-      { fontSize: 2.5, message: "Esme vs The Night!!", position: 150 },
+      {
+        fontSize: 1.7,
+        message: "Esme vs the Enchanted Forest!!",
+        position: 130,
+      },
       {
         fontSize: 0.5,
-        message: "( I built this game just for you!! )",
-        position: +190,
+        message: "( This is your very own website now!! )",
+        position: +180,
       },
     ],
     // loading: [
@@ -93,10 +97,10 @@ export default {
     end: {
       success: [
         { fontSize: 1.2, message: "You did it!!!", position: -115 },
-        { fontSize: 3, message: "Happy Birthday Anya!!!", position: -20 },
+        { fontSize: 3, message: "Happy Birthday Esme!!!", position: -20 },
         {
           fontSize: 1,
-          message: "What are the creatures of the night afraid of?...",
+          message: "What are the magical creatures afraid of?...",
           position: +30,
         },
         {
@@ -114,12 +118,12 @@ export default {
         { fontSize: 3, message: "Game Over!", position: -30 },
         {
           fontSize: 1.2,
-          message: "Anya did not survive the night!!...",
+          message: "Esme has become part of the forest now!!...",
           position: +30,
         },
         {
           fontSize: 1.2,
-          message: "Guess we'll have to give her presents to Esme instead!!",
+          message: "Guess we'll have to give her presents to Anya instead!!",
           position: +80,
         },
       ],

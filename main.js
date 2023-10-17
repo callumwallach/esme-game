@@ -24,6 +24,7 @@ const ESME = "esme";
 
 const owner = ESME;
 
+const JUST_BOSS = false;
 const NO_ENEMIES_TESTING = false;
 const MAX = 100 * 60 * 1000;
 
@@ -53,8 +54,12 @@ window.addEventListener("load", () => {
   const maxTime = NO_ENEMIES_TESTING ? MAX : 3 * 60 * 1000;
   let fps = 20;
   let enemyInterval = NO_ENEMIES_TESTING ? MAX : 2 * 1000;
-  let bossInterval = NO_ENEMIES_TESTING ? MAX : 1 * 60 * 1000;
-  let bossMaxHealth = 50;
+  let bossInterval = NO_ENEMIES_TESTING
+    ? MAX
+    : JUST_BOSS
+    ? 1000
+    : 1 * 60 * 1000;
+  let bossMaxHealth = 75;
   let maxParticles = 50;
   let sound = true;
   let powerBar = true;

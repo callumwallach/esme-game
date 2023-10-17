@@ -1,12 +1,12 @@
 export default {
   imageName: "enemyBoss",
   frames: {
-    FLY: {
+    IDLE: {
       frame: {
         x: 1,
         y: 1,
-        w: 2344,
-        h: 350,
+        w: 1573,
+        h: 255,
       },
       rotated: false,
       trimmed: false,
@@ -21,32 +21,32 @@ export default {
         h: 350,
       },
     },
-    SHOOT: {
+    MOVE: {
       frame: {
         x: 1,
-        y: 353,
-        w: 3520,
-        h: 348,
+        y: 258,
+        w: 4465,
+        h: 270,
       },
       rotated: false,
       trimmed: false,
       spriteSourceSize: {
         x: 0,
         y: 0,
-        w: 3520,
-        h: 348,
+        w: 2344,
+        h: 350,
       },
       sourceSize: {
-        w: 3520,
-        h: 348,
+        w: 2344,
+        h: 350,
       },
     },
     THREATEN: {
       frame: {
         x: 1,
-        y: 703,
-        w: 2656,
-        h: 396,
+        y: 530,
+        w: 4494,
+        h: 300,
       },
       rotated: false,
       trimmed: false,
@@ -61,12 +61,32 @@ export default {
         h: 396,
       },
     },
+    SHOOT: {
+      frame: {
+        x: 1,
+        y: 530,
+        w: 4494,
+        h: 300,
+      },
+      rotated: false,
+      trimmed: false,
+      spriteSourceSize: {
+        x: 0,
+        y: 0,
+        w: 3520,
+        h: 348,
+      },
+      sourceSize: {
+        w: 3520,
+        h: 348,
+      },
+    },
     DIE: {
       frame: {
         x: 1,
-        y: 1101,
-        w: 3972,
-        h: 380,
+        y: 1088,
+        w: 3600,
+        h: 300,
       },
       rotated: false,
       trimmed: false,
